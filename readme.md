@@ -1,4 +1,5 @@
 # Système de Vote en Temps Réel avec etcd
+![image](https://github.com/user-attachments/assets/7529c3a9-3c7b-4cb5-a272-9e2bb2adeb1e)
 
 Ce projet est un système de vote en temps réel utilisant etcd comme base de données distribuée pour stocker et synchroniser les données de vote. Il permet aux utilisateurs de créer des sessions de vote, de voter sur différentes options et de voir les résultats en temps réel.
 
