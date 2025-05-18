@@ -3,10 +3,7 @@
 
 Ce projet est un système de vote en temps réel utilisant etcd comme base de données distribuée pour stocker et synchroniser les données de vote. Il permet aux utilisateurs de créer des sessions de vote, de voter sur différentes options et de voir les résultats en temps réel.
 
-
-https://github.com/user-attachments/assets/186f431d-5bbd-4933-a250-302906a9bf4f
-
-
+Lien drive [démonstartion] : https://drive.google.com/file/d/1d3rmUY2dmfWwqFYotxw3cK55xvuJv26l/view?usp=sharing
 ## Caractéristiques
 
 - Création de sessions de vote avec titre, description et options personnalisées
