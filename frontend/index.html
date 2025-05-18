@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Vote en Temps Réel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vote Live</h1>
+        <p>Système de vote en temps réel avec etcd</p>
+    </header>
+
+    <main>
+        <section id="session-list-section" class="card">
+            <h2>Sessions de vote</h2>
+            <button id="create-session-btn" class="primary-btn">Créer une nouvelle session</button>
+            <div id="sessions-container">
+                <p>Chargement des sessions...</p>
+            </div>
+        </section>
+
+        <section id="create-session-section" class="card hidden">
+            <h2>Créer une nouvelle session</h2>
+            <form id="create-session-form">
+                <div class="form-group">
+                    <label for="session-title">Titre:</label>
+                    <input type="text" id="session-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="session-description">Description:</label>
+                    <textarea id="session-description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Options de vote:</label>
+                    <div id="options-container">
+                        <div class="option-input">
+                            <input type="text" class="option-text" required>
+                            <button type="button" class="remove-option-btn">×</button>
+                        </div>
+                        <div class="option-input">
+                            <input type="text" class="option-text" required>
+                            <button type="button" class="remove-option-btn">×</button>
+                        </div>
+                    </div>
+                    <button type="button" id="add-option-btn" class="secondary-btn">Ajouter une option</button>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="cancel-create-btn" class="secondary-btn">Annuler</button>
+                    <button type="submit" class="primary-btn">Créer la session</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="active-session-section" class="card hidden">
+            <div id="session-details">
+                <h2 id="session-title-display">Titre de la session</h2>
+                <p id="session-description-display">Description de la session</p>
+            </div>
+            
+            <div id="voting-area">
+                <h3>Voter</h3>
+                <div id="voting-options"></div>
+            </div>
+            
+            <div id="results-area">
+                <h3>Résultats en direct</h3>
+                <div id="results-display"></div>
+                <div class="chart-container">
+                    <canvas id="results-chart"></canvas>
+                </div>
+            </div>
+            
+            <button id="back-to-list-btn" class="secondary-btn">Retour à la liste</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Démonstration d'un système de vote utilisant etcd pour le stockage et la synchronisation en temps réel</p>
+    </footer>
+
+    <!-- Inclusion de Chart.js pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --secondary-color: #f39c12;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --card-bg: #fff;
+    --border-color: #ddd;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 0 auto 2rem;
+    max-width: 800px;
+}
+
+h2 {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: var(--primary-dark);
+    margin: 1.5rem 0 1rem;
+}
+
+.primary-btn, .secondary-btn {
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.secondary-btn {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.option-input {
+    display: flex;
+    margin-bottom: 0.75rem;
+    align-items: center;
+}
+
+.option-input .option-text {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+}
+
+.remove-option-btn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#add-option-btn {
+    margin-top: 0.5rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#sessions-container {
+    margin-top: 1.5rem;
+}
+
+.session-item {
+    background-color: var(--light-bg);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.session-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.session-item h3 {
+    color: var(--primary-color);
+    margin: 0 0 0.5rem;
+}
+
+#voting-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.vote-option {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--light-bg);
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.vote-option:hover {
+    background-color: #e8f4fd;
+    border-color: var(--primary-color);
+}
+
+.vote-option.selected {
+    background-color: #d4edff;
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+#results-display {
+    margin-bottom: 1.5rem;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.chart-container {
+    height: 300px;
+    margin-top: 1.5rem;
+}
+
+#back-to-list-btn {
+    margin-top: 2rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+        margin: 0 1rem 1.5rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions button {
+        width: 100%;
+    }
+}
